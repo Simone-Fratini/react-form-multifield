@@ -29,7 +29,7 @@ function FormComponent({ onAddRecipe }) {
         title,
         ingredients: ingredients.split(',').map((ing) => ing.trim()),
         cookingTime,
-        img: '../public/pasta/pastaCarbonara.jpg',
+        img: '../pasta/pastaCarbonara.jpg',
       };
       onAddRecipe(newRecipe);
       setTitle('');
