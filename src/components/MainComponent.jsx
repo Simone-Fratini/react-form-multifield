@@ -39,7 +39,7 @@ function FormComponent({ onAddRecipe }) {
   };
 
   return (
-    <form className="p-4 bg-gray-100 rounded-lg mb-6" onSubmit={handleSubmit}>
+    <form className="p-4 mt-5 bg-gray-100 rounded-lg mb-6" onSubmit={handleSubmit}>
       <div className="mb-4">
         <label className="block mb-2 font-bold">Title</label>
         <input
