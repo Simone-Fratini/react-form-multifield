@@ -1,4 +1,4 @@
-function FoodCards({ recipes }) {
+function FoodCards({ recipes, onRemoveRecipe }) {
   const ingredientsList = (ingredientsArray) => {
     return ingredientsArray.join(', ');
   };
@@ -9,7 +9,6 @@ function FoodCards({ recipes }) {
         <div
           key={food.id}
           className="relative bg-white shadow-2xl rounded-lg w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4 m-3 hover:animate-grow overflow-hidden"
-          style={{ zIndex: 0 }} // Ensure the cards are behind the header
         >
           <div className="aspect-w-16 aspect-h-9 overflow-hidden rounded-t-lg">
             <img
@@ -26,6 +25,12 @@ function FoodCards({ recipes }) {
             <p className="pt-3">
               <strong>Cooking Time:</strong> {food.cookingTime}.
             </p>
+            <button
+              className="mt-4 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
+              onClick={() => onRemoveRecipe(food.id)}
+            >
+              Remove
+            </button>
           </div>
         </div>
       ))}
